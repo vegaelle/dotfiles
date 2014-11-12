@@ -1,0 +1,24 @@
+! General
+!urxvt*termName:  rxvt-256color
+urxvt*loginShell:         true
+urxvt*scrollBar:         false
+urxvt*secondaryScroll:    true
+urxvt*saveLines:         65535
+urxvt*cursorBlink:       false
+urxvt*urgentOnBell:       true
+!urxvt*override-redirect:false
+!urxvt*borderLess:       false
+!urxvt*internalBorder:       0
+!urxvt*externalBorder:       0
+
+! Extensions
+urxvt*perl-lib:        /usr/lib/urxvt/perl/
+urxvt*perl-ext-common: default,matcher,searchable-scrollback
+urxvt*urlLauncher:     /usr/bin/firefox
+urxvt*matcher.button:  1
+!  - catch ugly URLs
+urxvt.cutchars:        `()'*<>[]{|}"
+
+! Appearance
+!  - use a bitmap font
+URxvt*font:		xft:DejaVu Sans Mono for Powerline:style=Regular:pixelsize=11
