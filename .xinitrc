@@ -7,6 +7,8 @@ export GNOME_KEYRING_PID
 
 xrdb -merge ~/.Xresources
 
+~/bin/export_x_info.sh
+
 exec xscreensaver -no-splash &
-setxkbmap fr bepo -option compose:pscr
+setxkbmap fr bepo -option compose:prcs
 exec /usr/bin/awesome

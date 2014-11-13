@@ -1,0 +1,72 @@
+[general]
+accounts = gordon,gordontesos,ndn
+maxsyncaccounts = 5
+ui = ttyui
+pythonfile=~/bin/offlineimap-helpers.py
+# Die after 120 seconds of nothing. Probably the connection died ...
+socktimeout = 120
+
+[Account gordon]
+localrepository = gordonlocal
+remoterepository = gordonremote
+autorefresh = 2
+quick = 0
+
+[Repository gordonlocal]
+type = Maildir
+localfolders = ~/Mail/gordon
+nametrans = localtransfolder_gordon
+
+[Repository gordonremote]
+type = IMAP
+remotehost = mail.gordon.re
+remoteusereval = get_username('damien@gordon.re')
+remotepasseval = get_password('damien@gordon.re')
+nametrans = oimaptransfolder_gordon
+ssl = yes
+cert_fingerprint = 95984aa1ea134f748f261ccd41204fbad9b8de0a
+folderfilter = lambda foldername: foldername in ['INBOX','Draft','Sent','Trash']
+
+
+[Account gordontesos]
+localrepository = gordontesoslocal
+remoterepository = gordontesosremote
+autorefresh = 2
+quick = 0
+
+[Repository gordontesoslocal]
+type = Maildir
+localfolders = ~/Mail/gordontesos
+nametrans = localtransfolder_gordontesos
+
+[Repository gordontesosremote]
+type = IMAP
+remotehost = mail.gordontesos.com
+remoteusereval = get_username('damien@gordontesos.com')
+remotepasseval = get_password('damien@gordontesos.com')
+nametrans = oimaptransfolder_gordontesos
+ssl = yes
+cert_fingerprint = 95984aa1ea134f748f261ccd41204fbad9b8de0a
+folderfilter = lambda foldername: foldername in ['INBOX','Draft','Sent','Trash']
+
+
+[Account ndn]
+localrepository = ndnlocal
+remoterepository = ndnremote
+autorefresh = 2
+quick = 0
+
+[Repository ndnlocal]
+type = Maildir
+localfolders = ~/Mail/ndn
+nametrans = localtransfolder_ndn
+
+[Repository ndnremote]
+type = IMAP
+remotehost = mail.ndn.cx
+remoteusereval = get_username('dnicolas@ndn.cx')
+remotepasseval = get_password('dnicolas@ndn.cx')
+nametrans = oimaptransfolder_ndn
+ssl = yes
+cert_fingerprint = 3716e003f162a3c9cb564e4cb130d633507d426f
+folderfilter = lambda foldername: foldername in ['INBOX','Draft','Sent','Trash']
