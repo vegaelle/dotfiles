@@ -10,5 +10,5 @@ xrdb -merge ~/.Xresources
 ~/bin/export_x_info.sh
 
 exec xscreensaver -no-splash &
-setxkbmap fr bepo -option compose:prcs
+setxkbmap fr bepo -option compose:prsc
 exec /usr/bin/awesome
