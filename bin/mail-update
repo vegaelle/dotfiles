@@ -11,7 +11,7 @@
 
 longcommand="offlineimap -o -u Noninteractive.Quiet"
 shortcommand="offlineimap -o -f INBOX,IML -u Noninteractive.Quiet"
-sendmailcommand="/home/chicken/bin/msmtp-runqueue.sh"
+sendmailcommand="/home/gordon/bin/msmtp-runqueue.sh"
 # Time in seconds between long syncs:
 longsyncdiff=120 # 30 Minutes
 
