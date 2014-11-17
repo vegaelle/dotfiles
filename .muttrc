@@ -417,6 +417,7 @@ set sidebar_delim='|'
       
 # Libellé(s) à afficher ( =box1 =box2)
 #mailboxes =INBOX
+
        
 # Couleur (Nouveau mail)
 color sidebar_new red default
@@ -437,6 +438,10 @@ macro pager b 'toggle sidebar_visible'
            
 # bounce-message
 #bind index B bounce-message
+
+set sidebar_format="%B [%N]%S"
+# set sidebar_folderindent=yes
+set sidebar_shortpath=yes
 
 set header_cache=~/.mutt/.hcache
 
