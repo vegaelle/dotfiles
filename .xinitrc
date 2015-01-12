@@ -11,4 +11,5 @@ xrdb -merge ~/.Xresources
 
 exec xscreensaver -no-splash &
 setxkbmap fr bepo -option compose:prsc
+exec powerline-daemon -q &
 exec /usr/bin/awesome

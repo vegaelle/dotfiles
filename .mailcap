@@ -1,2 +1,10 @@
 image/*; feh %s
 application/pdf; evince %s
+text/html;                      links %s; nametemplate=%s.html
+text/html;                      links -dump %s; nametemplate=%s.html; copiousoutput
+application/vnd.openxmlformats-officedocument.wordprocessingml.document;libreoffice %s
+application/vnd.openxmlformats-officedocument.wordprocessingml.template;libreoffice %s
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;libreoffice %s
+application/vnd.openxmlformats-officedocument.spreadsheetml.template;libreoffice %s
+application/vnd.openxmlformats-officedocument.presentationml.presentation;libreoffice %s
+application/msword;libreoffice %s
