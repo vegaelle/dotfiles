@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/chicken/Documents/pro/ibrowse/git/projet.git/hooks'
+let g:netrw_dirhist_2='/home/chicken/Documents/Former/former/field'
+let g:netrw_dirhist_3='/home/chicken/Documents/jump_proto/jump_server/hello'
+let g:netrw_dirhist_4='/etc'
+let g:netrw_dirhist_5='/home/chicken/Documents/panoramisk/tests'
