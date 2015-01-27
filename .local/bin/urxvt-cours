@@ -1,3 +1,3 @@
 #!/bin/zsh
 
-urxvt -fn "xft:DejaVu Sans Mono For Powerline:style=Regular:pixelsize=33"
+urxvt -fn "xft:DejaVu Sans Mono For Powerline:style=Regular:pixelsize=23"
