@@ -45,7 +45,7 @@ set history=200    " keep 50 lines of command line history
 set noic
 
 set list " pour afficher les machins affreux qui sont cacher (les tab et les endl)
-set listchars=tab:\|·,trail:·,extends:$,nbsp:=  " pour rendre les trucs affiché par list un peu moins moche
+set listchars=tab:\|·,trail:·,extends:$,nbsp:·  " pour rendre les trucs affiché par list un peu moins moche
 
 
 " pour convertir les tab en espaces
@@ -287,8 +287,10 @@ nnoremap <silent> <F8> :TlistToggle<CR>
 " NERDTree plugin
 nnoremap <silent> <F9> :NERDTreeToggle<CR>
 
-set tw=80
-set colorcolumn=81
+set tw=79
+set colorcolumn=80
+
+set foldmethod=indent
 
 au BufRead /tmp/mutt-* set tw=72
 
