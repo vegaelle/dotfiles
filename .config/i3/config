@@ -168,3 +168,5 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym $mod+F1 exec /usr/bin/toggletouchpad
 
 bindsym $mod+l exec xscreensaver-command -l
+
+exec --no-startup-id DISPLAY=:0.0 feh --bg-scale ~/.config/i3/background.jpg

@@ -121,6 +121,15 @@ URxvt-cours.color15:               S_base03
 *color7:                S_base2
 *color15:               S_base3
 
+
+URxvt.transparent: true
+! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
+URxvt.shading: 20
+
+URxvt-cours.transparent: false
+! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
+URxvt-cours.shading: 100
+
 !-*- Perl extensions -*-
 URxvt*perl-ext-common: default,matcher,searchable-scrollback,font-size
 URxvt*.keysym.M-u:     perl:url-select:select_next
