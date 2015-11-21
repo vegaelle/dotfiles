@@ -12,4 +12,6 @@ xrdb -merge ~/.Xresources
 exec xscreensaver -no-splash &
 setxkbmap fr bepo -option compose:prsc
 exec powerline-daemon -q &
-exec /usr/bin/awesome
+exec /home/gordon/Documents/parcimonie.sh/parcimonie.sh &
+# exec /usr/bin/awesome
+exec /usr/bin/i3

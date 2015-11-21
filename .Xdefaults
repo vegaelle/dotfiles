@@ -1,29 +1,34 @@
 ! General
-!urxvt*termName:  rxvt-256color
-urxvt*loginShell:         true
-urxvt*scrollBar:         false
-urxvt*secondaryScroll:    true
-urxvt*saveLines:         65535
-urxvt*cursorBlink:       false
-urxvt*urgentOnBell:       true
-!urxvt*override-redirect:false
-!urxvt*borderLess:       false
-!urxvt*internalBorder:       0
-!urxvt*externalBorder:       0
+!URxvt*termName:  rxvt-256color
+URxvt*loginShell:         true
+URxvt*scrollBar:         false
+URxvt*secondaryScroll:    true
+URxvt*saveLines:         65535
+URxvt*cursorBlink:       false
+URxvt*urgentOnBell:       true
+!URxvt*override-redirect:false
+!URxvt*borderLess:       false
+!URxvt*internalBorder:       0
+!URxvt*externalBorder:       0
 
 
 ! Extensions
-urxvt*perl-lib:        /usr/lib/urxvt/perl/
-urxvt*perl-ext-common: default,matcher,searchable-scrollback,font-size
-urxvt*urlLauncher:     /usr/bin/firefox
-urxvt*matcher.button:  1
+URxvt*perl-lib:        /usr/lib/URxvt/perl/
+URxvt*perl-ext-common: default,matcher,searchable-scrollback,font-size
+URxvt*urlLauncher:     /usr/bin/firefox
+URxvt*matcher.button:  1
 !  - catch ugly URLs
-urxvt.cutchars:        `()'*<>[]{|}"
+URxvt.cutchars:        `()'*<>[]{|}"
+URxvt-cours.cutchars:        `()'*<>[]{|}"
 
 ! CTRL -/+/= to change font size
 URxvt.keysym.C-plus: perl:font-size:increase
 URxvt.keysym.C-minus: perl:font-size:decrease
 URxvt.keysym.C-equal: perl:font-size:reset
+
+URxvt-cours.keysym.C-plus: perl:font-size:increase
+URxvt-cours.keysym.C-minus: perl:font-size:decrease
+URxvt-cours.keysym.C-equal: perl:font-size:reset
 
 ! Appearance
 !  - use a bitmap font
