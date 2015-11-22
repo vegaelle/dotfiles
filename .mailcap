@@ -8,3 +8,5 @@ application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;libreoffice %s
 application/vnd.openxmlformats-officedocument.spreadsheetml.template;libreoffice %s
 application/vnd.openxmlformats-officedocument.presentationml.presentation;libreoffice %s
 application/msword;libreoffice %s
+application/vnd.oasis.opendocument.text;libreoffice %s
+application/vnd.oasis.opendocument.spreadsheet;libreoffice %s
