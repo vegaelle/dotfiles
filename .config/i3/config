@@ -152,16 +152,20 @@ mode "resize" {
 
 bindsym $mod+o mode "resize"
 
+exec xset fp+ $HOME/.fonts/misc/
+exec xset fp+ $HOME/.fonts/terminesspowerline/
+exec xset fp+ $HOME/.fonts/ohsnap/
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        # status_command i3status
+        status_command i3status
         # status_command /usr/bin/python $HOME/.local/lib64/python3.4/site-packages/powerline/bindings/bar/powerline-bar.py| lemonbar
         # i3bar_command lemonbar
         # status_command python $HOME/.local/lib64/python3.4/site-packages//powerline/bindings/i3/powerline-i3.py
         # font pango:DejaVu Sans Mono for Powerline:style=Regular:pixelsize=10
-        i3bar_command $HOME/.config/i3/lemonbar/i3_lemonbar.sh
-        tray_output primary
+        # i3bar_command $HOME/.config/i3/lemonbar/i3_lemonbar.sh
+        # tray_output primary
 }
 
 bindsym XF86AudioRaiseVolume exec amixer -c1 set Master 5%+
@@ -176,3 +180,5 @@ bindsym $mod+F1 exec /usr/bin/toggletouchpad
 bindsym $mod+l exec xscreensaver-command -l
 
 exec --no-startup-id DISPLAY=:0.0 feh --bg-scale ~/.config/i3/background.jpg
+
+
