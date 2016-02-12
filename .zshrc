@@ -12,7 +12,7 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
 
-DEFAULT_USER="gordon"
+# DEFAULT_USER="gordon"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -52,7 +52,7 @@ COMPLETION_WAITING_DOTS="true"
 # ~/.oh-my-zsh/plugins/*) Custom plugins may be added to
 # ~/.oh-my-zsh/custom/plugins/ Example format: plugins=(rails git textmate ruby
 # lighthouse) Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras python virtualenv virtualenv-wrapper tmux pip)
+plugins=(git git-extras python virtualenvwrapper tmux pip)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -80,8 +80,13 @@ export PATH=$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$HOME/.local/bin:$HOME/
 
 source /usr/bin/virtualenvwrapper.sh
 
-alias startx="startx & vlock" alias chromium="chromium --touch-devices=9" export
+alias startx="startx & vlock"
+alias chromium="chromium --touch-devices=12" export
 EDITOR='vim'
 
 setopt NO_SHAREHISTORY
 unset GREP_OPTIONS
+
+function w() {
+    cd "/home/gordon/Documents/dev/$1"
+}
