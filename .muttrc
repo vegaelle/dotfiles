@@ -132,49 +132,45 @@ unignore	from: subject to cc mail-followup-to \
 # Color definitions
 #
 
-# #color normal white default
-# color hdrdefault red default
-# color quoted brightblue default
-# color signature red default
-# color indicator brightyellow red
-# color error brightred default
-# color status yellow blue
-# color tree magenta default	# the thread tree in the index menu
-# color tilde magenta default
-# color message brightcyan default
-# color markers brightcyan default
-# color attachment brightmagenta default
-# color search default green	# how to hilite search patterns in the pager
-# 
-# color header brightred default ^(From|Subject):
-# color body magenta default "(ftp|http|https)://[^ ]+"	# point out URLs
-# color body magenta default [-a-z_0-9.]+@[-a-z_0-9.]+	# e-mail addresses
-# color underline brightgreen default
-# 
-# # text colors - general functions
-# color normal white default # normal text
-# color status brightgreen blue # status bar, last and first row
-# color search brightyellow red # search results
-# color message brightyellow default # information messages, last row
-# color error brightred default # error messages, last row
-# color markers brightred default # the + sign at the start of broken lines
-# 
-# # text colors - message index and attachment menu
-# color indicator yellow default # current message selected
-# color tree blue default # Threads' arrow
-# color index brightblue default ~F # important messages ! flag - command "F"
-# color index brightyellow default ~N # nouveaux messages N flag - command "N"
-# color index magenta default ~T # tagged messages * flag - command "t"
-# color index brightwhite default ~U # non-lu messages
-# color index red default ~D # messages supprimés D flag - commands "d"/"u"
+#color normal white default
+color hdrdefault red default
+color quoted brightblue default
+color signature red default
+color indicator brightyellow red
+color error brightred default
+color status yellow blue
+color tree magenta default	# the thread tree in the index menu
+color tilde magenta default
+color message brightcyan default
+color markers brightcyan default
+color attachment brightmagenta default
+color search default green	# how to hilite search patterns in the pager
+
+color header brightred default ^(From|Subject):
+color body magenta default "(ftp|http|https)://[^ ]+"	# point out URLs
+color body magenta default [-a-z_0-9.]+@[-a-z_0-9.]+	# e-mail addresses
+color underline brightgreen default
+
+# text colors - general functions
+color normal white default # normal text
+color status brightgreen blue # status bar, last and first row
+color search brightyellow red # search results
+color message brightyellow default # information messages, last row
+color error brightred default # error messages, last row
+color markers brightred default # the + sign at the start of broken lines
+
+# text colors - message index and attachment menu
+color indicator yellow default # current message selected
+color tree blue default # Threads' arrow
+color index brightblue default ~F # important messages ! flag - command "F"
+color index brightyellow default ~N # nouveaux messages N flag - command "N"
+color index magenta default ~T # tagged messages * flag - command "t"
+color index brightwhite default ~U # non-lu messages
+color index red default ~D # messages supprimés D flag - commands "d"/"u"
 
 # attributes when using a mono terminal
 #mono header underline ^(From|Subject):
 mono quoted bold
-
-source ~/.mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc
-# source ~/.mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
-
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #
@@ -203,6 +199,8 @@ macro index \cb "<pipe-message> urlview<Enter>"	# simulate the old browse-url fu
 
 macro index S "<save-message>+spam<Enter>"
 macro pager S "<save-message>+spam<Enter>"
+
+macro index,pager y <change-folder>?<toggle-mailboxes>
 
 #macro index \#	"<search>bug<Enter>"	# search for bugs
 #macro index "\""	"<enter-command> set realname=\"real hairy macro\" ?realname<Enter>" # and a comment to boot!
@@ -411,13 +409,16 @@ set sidebar_visible=yes
     
 # Délimiteur
 set sidebar_delim='|'
+
+set sidebar_format="%B [%N]%S"
+set sidebar_shortpath=yes
+# set sidebar_folderindent=yes
      
 # Trie alphabétique (yes/no)
 #set sidebar_sort=no
       
 # Libellé(s) à afficher ( =box1 =box2)
 #mailboxes =INBOX
-
        
 # Couleur (Nouveau mail)
 color sidebar_new red default
@@ -438,10 +439,6 @@ macro pager b 'toggle sidebar_visible'
            
 # bounce-message
 #bind index B bounce-message
-
-set sidebar_format="%B [%N]%S"
-# set sidebar_folderindent=yes
-set sidebar_shortpath=yes
 
 set header_cache=~/.mutt/.hcache
 

@@ -1,28 +1,24 @@
-#macro index <f2> '<change-folder>imaps://imap.gmail.com<enter>'
-
-#folder-hook 'wizishop.com' 'source ~/.mutt/account.wizishop'
-# On bascule vers le compte par defaut au démarrage
-
-#source ~/.mutt/account.wizishop
-
-#account-hook 'wizishop.com' 'set imap_user=\'damien@wizishop.com\' imap_pass=\'`pwsafe -pEq damien@wizishop.com`\''
-
-#set imap_user=damien@gordon.re
-#set imap_pass=`pwsafe -pEq damien@gordon.re`
-#set imap_authenticators="login"
-#set from="Damien Nicolas <damien@gordon.re>"
-#set hostname="gordon.re"
-#set folder="imaps://mail.gordon.re/"
-#set postponed="=Drafts"
-#set spoolfile="imaps://mail.gordon.re/INBOX"
-#set mail_check=120
-
 set imap_check_subscribed
 unset imap_passive
 
 set spoolfile="+/gordon/gordon"
 
-mailboxes = "+/gordon/gordon" "+/gordon/gordon.Drafts" "+/gordon/gordon.Sent" "+/gordon/gordon.Trash" "+/gordontesos/gordontesos" "+/gordontesos/gordontesos.Drafts" "+/gordontesos/gordontesos.Sent" "+/gordontesos/gordontesos.Trash" "+/ndn/ndn" "+/ndn/ndn.Drafts" "+/ndn/ndn.Sent" "+/ndn/ndn.Trash" "=mu-search"
+mailboxes = `for folder in ~/Mail/*; do \
+    if [ -x $folder ]; then \
+        box=$(basename "$folder"); \
+        if [ ! $box = 'mu-search' ]; then \
+            for file in ~/Mail/$box/*; do \
+                box2=$(basename "$file"); \
+                if [[ ! "$box2" = '.' && ! "$box2" = '..' && ! "$box2" = '.customflags' \
+                 && ! "$box2" = '.subscriptions' && ! "$box2" = $box.* ]]; then \
+                    echo -n "\"+$box/$box2\" "; \
+                fi; \
+            done; \
+        else \
+            echo -n "\"+$box\" "; \
+        fi; \
+    fi; \
+done`
 
 folder-hook gordon 'set from="Damien Nicolas <damien@gordon.re>"'
 folder-hook gordon 'set pgp_autosign postponed="+/gordon/gordon.Drafts" record="+/gordon/gordon.Sent" spoolfile="+/gordon/gordon"'
@@ -35,6 +31,10 @@ folder-hook gordontesos 'set sendmail="~/bin/msmtp-enqueue.sh -a gordontesos"'
 folder-hook ndn 'set from="Damien Nicolas <dnicolas@ndn.cx>"'
 folder-hook ndn 'set pgp_autosign postponed="+/ndn/ndn.Drafts" record="+/ndn/ndn.Sent" spoolfile="+/ndn/ndn"'
 folder-hook ndn 'set sendmail="~/bin/msmtp-enqueue.sh -a ndn"'
+
+folder-hook opcheese 'set from="Gordon <gordon@opchee.se>"'
+folder-hook opcheese 'set pgp_autosign postponed="+/opcheese/opcheese.Drafts" record="+/opcheese/opcheese.Sent" spoolfile="+/opcheese/opcheese"'
+folder-hook opcheese 'set sendmail="~/bin/msmtp-enqueue.sh -a opcheese"'
 
 
 #folder-hook gordontesos 'set from="Damien Nicolas <damien@gordontesos.com>" signature="~/.signature.gordontesos"'

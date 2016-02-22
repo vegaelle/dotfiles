@@ -1,5 +1,5 @@
 [general]
-accounts = gordon,gordontesos,ndn
+accounts = gordon,gordontesos,opcheese,ndn
 maxsyncaccounts = 5
 ui = ttyui
 pythonfile=~/bin/offlineimap-helpers.py
@@ -41,13 +41,15 @@ nametrans = localtransfolder_gordontesos
 
 [Repository gordontesosremote]
 type = IMAP
-remotehost = mail.gordontesos.com
-remoteusereval = get_username('damien@gordontesos.com')
-remotepasseval = get_password('damien@gordontesos.com')
+# remotehost = mail.gordontesos.com
+remotehost = bleu-de-laqueuille.opchee.se
+remoteusereval = get_username('damien2@gordontesos.com')
+remotepasseval = get_password('damien2@gordontesos.com')
 nametrans = oimaptransfolder_gordontesos
 ssl = yes
-cert_fingerprint = 95984aa1ea134f748f261ccd41204fbad9b8de0a
-folderfilter = lambda foldername: foldername in ['INBOX','Draft','Sent','Trash']
+# cert_fingerprint = 95984aa1ea134f748f261ccd41204fbad9b8de0a
+cert_fingerprint = d7e59f2fc3966d8dd2041f9dc04b61d28e084af9
+# folderfilter = lambda foldername: foldername in ['INBOX','Draft','Sent','Trash']
 
 
 [Account ndn]
@@ -70,3 +72,26 @@ nametrans = oimaptransfolder_ndn
 ssl = yes
 cert_fingerprint = 3716e003f162a3c9cb564e4cb130d633507d426f
 folderfilter = lambda foldername: foldername in ['INBOX','Draft','Sent','Trash']
+
+[Account opcheese]
+localrepository = opcheeselocal
+remoterepository = opcheeseremote
+autorefresh = 2
+quick = 0
+
+[Repository opcheeselocal]
+type = Maildir
+localfolders = ~/Mail/opcheese
+nametrans = localtransfolder_opcheese
+
+[Repository opcheeseremote]
+type = IMAP
+remotehost = bleu-de-laqueuille.opchee.se
+# remoteusereval = get_username('gordon@opchee.se')
+# remotepasseval = get_password('gordon@opchee.se')
+remoteusereval = get_username('bleu-de-laqueuille.opchee.se')
+remotepasseval = get_password('bleu-de-laqueuille.opchee.se')
+cert_fingerprint = d7e59f2fc3966d8dd2041f9dc04b61d28e084af9
+nametrans = oimaptransfolder_opcheese
+ssl = yes
+# folderfilter = lambda foldername: foldername in ['INBOX', 'INBOX.fromage','Draft','Sent','Trash']

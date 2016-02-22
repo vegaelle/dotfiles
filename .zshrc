@@ -12,7 +12,7 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
 
-# DEFAULT_USER="gordon"
+DEFAULT_USER="gordon"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -90,3 +90,5 @@ unset GREP_OPTIONS
 function w() {
     cd "/home/gordon/Documents/dev/$1"
 }
+
+export QT_SELECT=5

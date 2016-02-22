@@ -10,3 +10,4 @@ application/vnd.openxmlformats-officedocument.presentationml.presentation;libreo
 application/msword;libreoffice %s
 application/vnd.oasis.opendocument.text;libreoffice %s
 application/vnd.oasis.opendocument.spreadsheet;libreoffice %s
+audio/x-wav;mplayer %s
