@@ -64,8 +64,8 @@ augroup fileTypes
     au FileType mail          setlocal tw=72 fo+=o listchars=tab:\ \
 
     " disable deoplete auto-complete for text files
-    au FileType text,markdown,mail
-            \ call deoplete#custom#buffer_option('auto_complete', v:false)
+    " au FileType text,markdown,mail
+    "         \ call deoplete#custom#buffer_option('auto_complete', v:false)
 augroup END
 
 " Spell configuration

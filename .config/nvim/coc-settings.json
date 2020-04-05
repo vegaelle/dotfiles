@@ -1,0 +1,8 @@
+{
+    "python.globalModuleInstallation": true,
+    "python.jediEnabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.formatting.provider": "black",
+    "python.venvPath": "~/.virtualenvs"
+}

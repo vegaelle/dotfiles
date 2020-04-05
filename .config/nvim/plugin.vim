@@ -33,15 +33,15 @@ Plug 'vim-airline/vim-airline-themes'  " Airline themes
 " ----------------------------------------------------------------------------
 " Shougo plugin suite
 " ----------------------------------------------------------------------------
-Plug 'Shougo/denite.nvim', { 'tag': '2.1' }
-Plug 'chemzqm/denite-extra'
-if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-endif
+" Plug 'Shougo/denite.nvim', { 'tag': '2.1' }
+" Plug 'chemzqm/denite-extra'
+" if has('nvim')
+"     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"     Plug 'Shougo/deoplete.nvim'
+"     Plug 'roxma/nvim-yarp'
+"     Plug 'roxma/vim-hug-neovim-rpc'
+" endif
 
 if has('nvim')
     Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -61,7 +61,7 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'kmnk/denite-dirmark'
 Plug 'pocari/vim-denite-emoji'
 " Plug 'kristijanhusak/deoplete-phpactor', { 'for': 'php' }
-Plug 'deoplete-plugins/deoplete-zsh'
+" Plug 'deoplete-plugins/deoplete-zsh'
 Plug 'wokalski/autocomplete-flow', { 'for': 'js' }
 
 " ----------------------------------------------------------------------------
@@ -90,7 +90,7 @@ Plug 'jeetsukumaran/vim-pythonsense'   " Additionnal python text-objects
 Plug 'PeterRincker/vim-argumentative'  " Switch arguments
 Plug 'AndrewRadev/sideways.vim'        " Moving arguments and attributes
 Plug 'junegunn/goyo.vim'               " Minimalist interface on demand
-Plug 'dmerejkowsky/vim-ale'            " Async Linter
+" Plug 'dmerejkowsky/vim-ale'            " Async Linter
 Plug 'sjl/gundo.vim'                   " More undo
 Plug 'junegunn/vim-easy-align'         " Align tabs
 Plug 'dhruvasagar/vim-table-mode'      " Make table easily
@@ -108,15 +108,16 @@ Plug 'diepm/vim-rest-console'          " Call REST API from vim
 Plug 'rhysd/vim-grammarous'            " Grammar check
 Plug 'kkoomen/vim-doge'                " Documentation Generator
 Plug 'neoclide/coc.nvim',       {'branch': 'release'}
+Plug 'liuchengxu/vista.vim'            " LSP symbols tagbar
 " ----------------------------------------------------------------------------
 " Filetype specific plugins
 " ----------------------------------------------------------------------------
 " Python
-" Plug 'davidhalter/jedi-vim',         { 'for': 'python' }
+Plug 'davidhalter/jedi-vim',         { 'for': 'python' }
 " Plug 'zchee/deoplete-jedi',          { 'for': 'python' }
 Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
-Plug 'numirias/semshi',              { 'for': 'python',
-    \ 'do': ':UpdateRemotePlugins'} " semantic syntax
+" Plug 'numirias/semshi',              { 'for': 'python',
+"     \ 'do': ':UpdateRemotePlugins'} " semantic syntax
 Plug 'plytophogy/vim-virtualenv'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'jeetsukumaran/vim-pythonsense'    " python-specific objects
@@ -156,3 +157,5 @@ Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; ./generate.py' }
 
 " Rust
 Plug 'rust-lang/rust.vim'
+
+Plug 'LnL7/vim-nix'

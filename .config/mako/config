@@ -1,0 +1,5 @@
+font=Fira Code Light 10
+background-color=#586e75
+text-color=#93a1a1
+progress-color=over #dc322f
+default-timeout=5000
